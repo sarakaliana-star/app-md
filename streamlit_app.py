@@ -6,17 +6,17 @@ import matplotlib.pyplot as plt
 # -----------------------------------------------------------
 # 🎨 Configurações gerais
 # -----------------------------------------------------------
-st.set_page_config(page_title="Rendimento Escolar - EFAs e Escolas Rurais", layout="wide")
+st.set_page_config(page_title="Rendimento Escolar - EFAs (MEPES) e Escolas Rurais da Rede", layout="wide")
 
 # -----------------------------------------------------------
 # 🧭 Título e introdução
 # -----------------------------------------------------------
-st.title("📊 Escolas do MEPES e Escolas Rurais - Censo Escolar 2024")
+st.title("📊 Escolas do MEPES e Escolas Rurais da Rede - Censo Escolar 2024")
 
 st.markdown("""
 ### 🎯 Objetivo
 
-Este aplicativo tem como objetivo **comparar as taxas de rendimento escolar (aprovação, reprovação e abandono)** entre escolas do campo e escolas privadas, 
+Este aplicativo tem como objetivo **comparar as taxas de rendimento escolar (aprovação, reprovação e abandono)** entre escolas do campo da Rede Estadual e escolas do MEPES (privadas), 
 com base nos dados do **Censo Escolar 2024**.  
 
 A iniciativa busca **destacar o papel das Escolas Famílias Agrícolas (EFAs)** e da **pedagogia da alternância** na promoção da permanência escolar, 
@@ -110,7 +110,7 @@ if not taxa_aprovacao.empty and all(taxa_aprovacao['Localização'].isin(['Estad
     ### 📈 Resultados - Taxa de Aprovação
 
     As análises mostram que a **taxa média de aprovação** das escolas estaduais é de **{taxa_estadual:.1f}%**, 
-    enquanto nas escolas privadas é de **{taxa_privada:.1f}%**.  
+    enquanto nas escolas do MEPES (privadas) é de **{taxa_privada:.1f}%**.  
 
     Essa proximidade reforça o potencial das escolas públicas estaduais — especialmente das **EFAs**, 
     que, mesmo em contextos rurais e com menos recursos, mantêm níveis de aprovação semelhantes aos da rede privada.
@@ -139,7 +139,7 @@ if not taxa_abandono.empty and all(taxa_abandono['Localização'].isin(['Estadua
     ### 🧭 Resultados - Taxa de Abandono
 
     A **taxa média de abandono** nas escolas estaduais é de **{abandono_estadual:.1f}%**, 
-    enquanto nas privadas é de **{abandono_privada:.1f}%**.  
+    enquanto nas EFAs (privadas) é de **{abandono_privada:.1f}%**.  
 
     Mesmo com desafios estruturais, as escolas públicas vêm apresentando bons indicadores, 
     o que destaca o papel das **políticas de permanência escolar** e o diferencial da **pedagogia da alternância** nas **EFAs**.
